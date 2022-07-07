@@ -1,0 +1,19 @@
+Commands
+	dotnet --info
+	dotnet --help
+	
+	Start a project
+		dotnet new console
+
+	Running
+		dotnet run
+		dotnet run --project src/GradeBook/
+
+	Updating projects
+		dotnet restore
+
+	Build
+		dotnet build
+
+	Running
+		dotnet bin/Debug/netVERSION/FILE.dll
