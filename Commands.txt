@@ -17,3 +17,17 @@ Commands
 
 	Running
 		dotnet bin/Debug/netVERSION/FILE.dll
+
+
+VSCode Shortcuts
+	ctrl + . : generate method
+
+
+Testing
+	Create a new project inside tests folder
+		dotnet new xunit
+
+		dotnet test
+
+Add references
+	dotnet add reference  ../../src/GradeBook/GradeBook.csproj
