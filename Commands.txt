@@ -31,3 +31,13 @@ Testing
 
 Add references
 	dotnet add reference  ../../src/GradeBook/GradeBook.csproj
+
+
+Create a solution
+	dotnet new sln
+
+	dotnet sln add src/GradeBook/GradeBook.csproj
+	dotnet sln add test/GradeBook.Tests/GradeBook.Tests.csproj
+
+	dotnet build
+
