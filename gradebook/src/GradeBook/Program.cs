@@ -4,21 +4,14 @@ using System.Collections.Generic;
 namespace GradeBook {
     class Program {
         static void Main(string[] args) {
-            var book = new Book("My Grade Book");
+            IBook book = new DiskBook("My Grade Book");
+            //var book = new InMemoryBook("My Grade Book");
+            book.GradeAdded += OnGradeAdded;
+            book.GradeAdded += OnGradeAdded;
+            book.GradeAdded -= OnGradeAdded;
+            book.GradeAdded += OnGradeAdded;
 
-            do
-            {
-                Console.WriteLine("Enter a grade or 'q' to exit");
-                var input = Console.ReadLine();
-                Console.WriteLine(input);
-                if(input == "q")
-                {
-                    break;
-                }
-
-                var grade = double.Parse(input);
-                book.AddGrade(grade);
-            } while(true == true && false != true);
+            EnterGrades(book);
 
             var stats = book.GetStatistics();
 
@@ -35,6 +28,28 @@ namespace GradeBook {
             else {
                 Console.WriteLine("Hello void!");
             }
+        }
+
+        static void OnGradeAdded(object sender, EventArgs args)
+        {
+            Console.WriteLine("Grade Added");
+        }
+
+        private static void EnterGrades(IBook book)
+        {
+            do
+            {
+                Console.WriteLine("Enter a grade or 'q' to exit");
+                var input = Console.ReadLine();
+                Console.WriteLine(input);
+                if(input == "q")
+                {
+                    break;
+                }
+
+                var grade = double.Parse(input);
+                book.AddGrade(grade);
+            } while(true == true && false != true);
         }
     }
 }

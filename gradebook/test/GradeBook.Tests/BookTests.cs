@@ -9,7 +9,7 @@ public class BookTests
     public void BookCalculatesAnAverageGrade()
     {
         // arrange
-        var book = new Book("");
+        var book = new InMemoryBook("");
         book.AddGrade(70.123);
         book.AddGrade(20.487);
         book.AddGrade(90.666);
