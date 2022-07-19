@@ -1,0 +1,6 @@
+D:\C#\dot-net-studies\ACM\Acme.Common\bin\Debug\Acme.Common.dll
+D:\C#\dot-net-studies\ACM\Acme.Common\bin\Debug\Acme.Common.pdb
+D:\C#\dot-net-studies\ACM\Acme.Common\obj\Debug\Acme.Common.csproj.AssemblyReference.cache
+D:\C#\dot-net-studies\ACM\Acme.Common\obj\Debug\Acme.Common.csproj.CoreCompileInputs.cache
+D:\C#\dot-net-studies\ACM\Acme.Common\obj\Debug\Acme.Common.dll
+D:\C#\dot-net-studies\ACM\Acme.Common\obj\Debug\Acme.Common.pdb

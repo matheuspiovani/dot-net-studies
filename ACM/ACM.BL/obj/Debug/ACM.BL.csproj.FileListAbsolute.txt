@@ -1,0 +1,9 @@
+D:\C#\dot-net-studies\ACM\ACM.BL\bin\Debug\ACM.BL.dll
+D:\C#\dot-net-studies\ACM\ACM.BL\bin\Debug\ACM.BL.pdb
+D:\C#\dot-net-studies\ACM\ACM.BL\obj\Debug\ACM.BL.csproj.AssemblyReference.cache
+D:\C#\dot-net-studies\ACM\ACM.BL\obj\Debug\ACM.BL.csproj.CoreCompileInputs.cache
+D:\C#\dot-net-studies\ACM\ACM.BL\obj\Debug\ACM.BL.dll
+D:\C#\dot-net-studies\ACM\ACM.BL\obj\Debug\ACM.BL.pdb
+D:\C#\dot-net-studies\ACM\ACM.BL\bin\Debug\Acme.Common.dll
+D:\C#\dot-net-studies\ACM\ACM.BL\bin\Debug\Acme.Common.pdb
+D:\C#\dot-net-studies\ACM\ACM.BL\obj\Debug\ACM.BL.csproj.CopyComplete
