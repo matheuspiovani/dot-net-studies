@@ -22,7 +22,7 @@ namespace Acme.Biz.Tests
             var expected = 55m;
 
             // Act
-            var actual = currentProduct.CalculateSuggestedPrice(10m);
+            var actual = currentProduct.CalculateSuggestedPrice(10m).Result;
 
             // Assert
             Assert.AreEqual(expected, actual);
