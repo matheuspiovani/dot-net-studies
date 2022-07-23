@@ -37,7 +37,7 @@ namespace Acme.Biz
             return value;
         }
 
-        public List<Vendor> Retrieve() {
+        public ICollection<Vendor> Retrieve() {
             if (vendors == null) {
                 vendors = new List<Vendor>();
 
@@ -49,6 +49,57 @@ namespace Acme.Biz
 
             return vendors;
         }
+        /*
+        public Vendor[] RetrieveArray() {
+            var vendors = new Vendor[] {
+                new Vendor() { VendorId = 1, CompanyName = "A", Email = "mlp@mlp.com.br" },
+                new Vendor() { VendorId = 2, CompanyName = "B", Email = "mlp@mlp.com.br" }
+            };
+
+            return vendors;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<string, Vendor> RetrieveWithKeys() {
+            var vendors = new Dictionary<string, Vendor>() {
+                { "ABC Corp", new Vendor() {
+                    VendorId = 5, CompanyName = "ABC Corp", Email = "Abc@abc.com"
+                } },
+                { "QWE Corp", new Vendor() {
+                    VendorId = 5, CompanyName = "QWE Corp", Email = "QWE@abc.com"
+                } }
+            };
+            Console.WriteLine(vendors);
+            Console.WriteLine(vendors["ABC Corp"]);
+            Vendor vendor;
+            if(vendors.TryGetValue("BLABLA", out vendor)) {
+                Console.WriteLine(vendor);
+
+            }
+            else {
+                Console.WriteLine("Nope!");
+            }
+
+            foreach (var companyName in vendors.Keys) {
+                Console.WriteLine(companyName);
+                Console.WriteLine(vendors[companyName]);
+            }
+
+            foreach (var vend in vendors.Values) {
+                Console.WriteLine(vend);
+            }
+
+            foreach(var element in vendors) {
+                var vend = element.Value;
+                var key = element.Key;
+                Console.WriteLine($"{key} {vend}");
+            }
+
+            return vendors;
+        }*/
 
         /// <summary>
         /// Save data for one vendor.
@@ -62,6 +113,30 @@ namespace Acme.Biz
             // Code that saves the vendor
 
             return success;
+        }
+
+        public IEnumerable<Vendor> RetrieveWithIterator() {
+            this.Retrieve();
+
+            foreach(var vendor in vendors) {
+                Console.WriteLine($"Vendo id: {vendor.VendorId}");
+                yield return vendor;
+            }
+        }
+
+
+        public IEnumerable<Vendor> RetrieveAll() {
+            var vendors = new List<Vendor>() {
+                { new Vendor() { VendorId = 1, CompanyName = "A", Email = "a@a.com"} },
+                { new Vendor() { VendorId = 2, CompanyName = "B Toy", Email = "a@a.com"} },
+                { new Vendor() { VendorId = 3, CompanyName = "Toy C", Email = "a@a.com"} },
+                { new Vendor() { VendorId = 4, CompanyName = "D Toy", Email = "a@a.com"} },
+                { new Vendor() { VendorId = 5, CompanyName = "E", Email = "a@a.com"} },
+                { new Vendor() { VendorId = 6, CompanyName = "F", Email = "a@a.com"} },
+                { new Vendor() { VendorId = 7, CompanyName = "B", Email = "a@a.com"} }
+            };
+
+            return vendors;
         }
     }
 }

@@ -32,6 +32,20 @@ namespace Acme.Biz
                 Console.WriteLine(colorOption);
             }
 
+            /*
+            var states = new Dictionary<string, string>();
+            states.Add("CA", "California");
+            states.Add("WA", "Washington");
+            states.Add("NY", "Hawaii");
+            */
+
+            var states = new Dictionary<string, string>() {
+                {"CA", "California" },
+                {"WA", "Washington" },
+                {"NY", "New York" },
+            };
+            Console.WriteLine(states);
+
         }
         public Product(int productId,
                         string productName,

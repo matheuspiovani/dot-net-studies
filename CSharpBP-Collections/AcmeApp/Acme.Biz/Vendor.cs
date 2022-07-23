@@ -111,5 +111,26 @@ namespace Acme.Biz
         public override int GetHashCode() {
             return base.GetHashCode();
         }
+
+        /// <summary>
+        /// Sends an email to a set of vendors
+        /// </summary>
+        /// <param name="vendors"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public static List<string> SendEmail(ICollection<Vendor> vendors, string message) {
+            var confirmations = new List<String>();
+            var emailService = new EmailService();
+            Console.WriteLine(vendors.Count);
+
+            foreach(var vendor in vendors) {
+                var subject = "Important message for: " + vendor.CompanyName;
+                var confirmation = emailService.SendMessage(subject, message, vendor.Email);
+
+                confirmations.Add(confirmation);
+            }
+
+            return confirmations;
+        }
     }
 }
